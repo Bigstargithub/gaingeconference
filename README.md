@@ -1,2 +1,2 @@
-# gaingeconference
-gainge conference program
+# 가인지 컨퍼런스
+- 2021.09.16 가인지 컨퍼런스 repo 생성
