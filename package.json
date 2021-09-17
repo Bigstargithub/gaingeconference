@@ -1,0 +1,31 @@
+{
+  "name": "gaingeconference",
+  "version": "0.0.1",
+  "description": "- 2021.09.16 가인지 컨퍼런스 repo 생성",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bigstargithub/gaingeconference.git"
+  },
+  "keywords": [],
+  "author": "Eddie Jang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bigstargithub/gaingeconference/issues"
+  },
+  "homepage": "https://github.com/Bigstargithub/gaingeconference#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "morgan": "^1.10.0",
+    "nunjucks": "^3.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
