@@ -6,8 +6,11 @@ const dotenv = require('dotenv');
 const morgan = require('morgan');
 const path = require('path');
 const { nextTick } = require('process');
+const db = require('./models');
+const { Sequelize } = require('./models')
 
 dotenv.config();
+
 class App {
   constructor() {
     this.app = express();
@@ -17,6 +20,9 @@ class App {
 
     //미들웨어 셋팅
     this.setMiddleWare();
+
+    // db connection
+    this.dbconnection();
 
     //로컬변수 셋팅
     this.setStatic();
@@ -54,6 +60,17 @@ class App {
         secure: false,
       },
     }));
+  }
+  dbconnection() {
+    db.sequelize.authenticate()
+    .then(() => {
+        console.log('연결 성공');
+        return db.sequelize.sync();
+    })
+    .catch((err) => {
+      console.log('연결 실패');
+      console.error(err);
+    })
   }
 
   setStatic() {
