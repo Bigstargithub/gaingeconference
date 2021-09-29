@@ -13,7 +13,35 @@ img
 {
   width:100%;
   height:100%;
+}
 
+/* HEADER */
+header
+{
+  width:100%;
+  height:100px;
+}
+.header-container
+{
+  display:flex;
+  justify-content: flex-start;
+  padding:0 30px;
+}
+.header__left
+{
+  width:30%;
+}
+
+.header__left .header__logo
+{
+  
+}
+.header__left .header__logo .logo
+{
+  width:100px;
+  height:100px;
+  background:url("img/logo.png") center/contain no-repeat;
+  
 }
 
 /* LOGIN */
@@ -82,4 +110,62 @@ img
   border:1px solid #000f9f;
   border-radius:20px;
   cursor:pointer;
+}
+
+/* WATCH */
+.watch
+{
+  width:1100px;
+  position:relative;
+  margin:0 auto;
+  margin-top:40px;
+}
+.watch .watch__player
+{
+  display:flex;
+}
+.watch .watch__player .play__lists
+{
+  width:400px;
+  border:1px solid #000f9f;
+  margin-left:50px;
+}
+.watch .watch__player .play__lists .playlist
+{
+  width:350px;
+  border:1px solid #000f9f;
+  border-radius:5px;
+  height:44px;
+  margin:0 auto;
+  margin-top:20px;
+  padding:5px;
+  box-sizing:border-box;
+  font-size:30px;
+  color:#000f9f;
+  font-weight:600;
+  text-align:center;
+}
+.watch .watch__file
+{
+  margin-top:50px;
+}
+.watch .watch__file .file__title
+{
+  font-size:30px;
+}
+.watch .watch__file .file__lists
+{
+  margin-top:30px;
+}
+.watch .watch__file .file__lists .file
+{
+  width:600px;
+  height:50px;
+  border:1px solid #000f9f;
+  border-radius:5px;
+  margin-bottom:20px;
+}
+.watch .watch__file .file__lists .file:last-child
+{
+  margin-bottom:0;
 }
