@@ -1,5 +1,6 @@
 {% extends 'default.html' %}
 {% block content %}
+<script defer src="/enter.js"></script>
 
 <section class="login">
   <div class="inner">
@@ -10,12 +11,14 @@
     </div>
     <div class="code-group">
       <div class="code-textbox">
-        <input type="text" class="textbox" placeholder="입장 코드를 입력하여 주십시오" />
+        <input type="text" id="enter_code" class="textbox" placeholder="입장 코드를 입력하여 주십시오" />
       </div>
       <div class="code-confirm">
-        <input type="button" class="btn" value="입장하기" />
+        <input type="button" id="enter_btn" class="btn" value="입장하기" />
       </div>
     </div>
   </div>
 </section>
+
+
 {% endblock %}

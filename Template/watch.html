@@ -1,0 +1,32 @@
+{% extends 'header.html' %}
+{% block content %}
+<script defer src="/vimeo.js"></script>
+<section class="watch">
+  <div class="watch__player">
+    <div id="player"></div>
+    <div class="play__lists">
+      <div class="playlist" data-id="588720512">영상 1</div>
+      <div class="playlist" data-id="582479216">영상 2</div>
+      <div class="playlist" data-id="581098739">영상 3</div>
+      <div class="playlist" data-id="569780654">영상 4</div>
+      <div class="playlist" data-id="569780642">영상 5</div>
+    </div>
+  </div>
+  <div class="watch__file">
+    <div class="file__title">
+      자료 다운로드
+    </div>
+    <div class="file__lists">
+      <a href="logo.png" download>
+        <div class="file">파일 1</div>
+      </a>
+      <a href="logo.png" download>
+        <div class="file">파일 2</div>
+      </a>
+      <a href="logo.png" download>
+        <div class="file">파일 3</div>
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}
