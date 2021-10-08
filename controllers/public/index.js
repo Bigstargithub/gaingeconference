@@ -7,6 +7,6 @@ router.get('/',ctrl.get_main)
 
 router.post('/enter', ctrl.post_enter)
 
-router.get('/watch',is_login, ctrl.get_watch)
+router.get('/watch', ctrl.get_watch)
 
 module.exports = router;
