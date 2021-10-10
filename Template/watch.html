@@ -1,13 +1,15 @@
 {% extends 'header.html' %}
 {% block content %}
 <script defer src="/vimeo.js"></script>
+<script defer src="/watch.js"></script>
+
 <section class="watch">
   <div class="watch__player">
     <div id="player"></div>
   </div>
   <div class="watch__title">
     <div class="lesson_number">
-      lesson
+      lesson 1
     </div>
     <div class="lesson_title">
       V모델 영상 제목
@@ -23,15 +25,15 @@
   </div>
   <div class="watch__playlist">
     <div class="play_tabs">
-      <div class="tab active">
+      <div class="tab active" data-play="V-model">
         V모델 영상
       </div>
-      <div class="tab">
+      <div class="tab" data-play="conf">
         2022 경영전략 컨퍼런스
       </div>
     </div>
-    <div class="play_lists">
-      <div class="play_list">
+    <div class="play_lists V-model">
+      <div class="play_list active" data-id="616891145">
         <div class="list_thumbnail">
           <img src="https://i.vimeocdn.com/video/1258913725-9bb98ec0afb9e7a373754047fde8503f3211b64935ffb8562f7f391cc4b96c57-d?mw=700&mh=395" alt="테스트" />
         </div>
@@ -49,25 +51,7 @@
           </div>
         </div>
       </div>
-      <div class="play_list">
-        <div class="list_thumbnail">
-          <img src="https://i.vimeocdn.com/video/1258913725-9bb98ec0afb9e7a373754047fde8503f3211b64935ffb8562f7f391cc4b96c57-d?mw=700&mh=395" alt="테스트" />
-        </div>
-        <div class="list_detail">
-          <div class="lesson_number">
-            Lesson 1
-          </div>
-          <div class="lesson_title">
-            V모델<br/>
-            영상 제목
-          </div>
-          <div class="lesson_teacher">
-            <span>김경민</span>
-            <span class="teacher_position">가인지컨설팅그룹 대표</span>
-          </div>
-        </div>
-      </div>
-      <div class="play_list">
+      <div class="play_list" data-id="596392788">
         <div class="list_thumbnail">
           <img src="https://i.vimeocdn.com/video/1258913725-9bb98ec0afb9e7a373754047fde8503f3211b64935ffb8562f7f391cc4b96c57-d?mw=700&mh=395" alt="테스트" />
         </div>
@@ -140,7 +124,127 @@
         </div>
       </div>
     </div>
+    <div class="play_lists conf">
+      <div class="play_list">
+        <div class="list_thumbnail">
+          <img src="https://i.vimeocdn.com/video/1258913725-9bb98ec0afb9e7a373754047fde8503f3211b64935ffb8562f7f391cc4b96c57-d?mw=700&mh=395" alt="테스트" />
+        </div>
+        <div class="list_detail">
+          <div class="lesson_number">
+            Session 1
+          </div>
+          <div class="lesson_title">
+            고객 경험을 높여주는<br/>
+            브랜드 성장 전략
+          </div>
+          <div class="lesson_teacher">
+            <span>조세원</span>
+            <span class="teacher_position">뤼이드 CBSO</span>
+          </div>
+        </div>
+      </div>
+      <div class="play_list">
+        <div class="list_thumbnail">
+          <img src="https://i.vimeocdn.com/video/1258913725-9bb98ec0afb9e7a373754047fde8503f3211b64935ffb8562f7f391cc4b96c57-d?mw=700&mh=395" alt="테스트" />
+        </div>
+        <div class="list_detail">
+          <div class="lesson_number">
+            Session 2
+          </div>
+          <div class="lesson_title">
+            고객 중심의 혁신을 일으키는<br/>
+            데이터 마케팅 전략
+          </div>
+          <div class="lesson_teacher">
+            <span>김윤경</span>
+            <span class="teacher_position">어센트 코리아 마케팅 본부장</span>
+          </div>
+        </div>
+      </div>
+      <div class="play_list">
+        <div class="list_thumbnail">
+          <img src="https://i.vimeocdn.com/video/1258913725-9bb98ec0afb9e7a373754047fde8503f3211b64935ffb8562f7f391cc4b96c57-d?mw=700&mh=395" alt="테스트" />
+        </div>
+        <div class="list_detail">
+          <div class="lesson_number">
+            Session 3
+          </div>
+          <div class="lesson_title">
+            디지털 시대, 잘 팔리는<br/>
+            온라인 마케팅 노하우
+          </div>
+          <div class="lesson_teacher">
+            <span>구자영</span>
+            <span class="teacher_position">잘 팔리는 브랜드 법칙 저자</span>
+          </div>
+        </div>
+      </div>
+      <div class="play_list">
+        <div class="list_thumbnail">
+          <img src="https://i.vimeocdn.com/video/1258913725-9bb98ec0afb9e7a373754047fde8503f3211b64935ffb8562f7f391cc4b96c57-d?mw=700&mh=395" alt="테스트" />
+        </div>
+        <div class="list_detail">
+          <div class="lesson_number">
+            Session 4
+          </div>
+          <div class="lesson_title">
+            DT 기반의 성과내는<br/>
+            조직문화 구축하는 방법
+          </div>
+          <div class="lesson_teacher">
+            <span>김지현</span>
+            <span class="teacher_position">SK mySUNI 부사장</span>
+          </div>
+        </div>
+      </div>
+      <div class="play_list">
+        <div class="list_thumbnail">
+          <img src="https://i.vimeocdn.com/video/1258913725-9bb98ec0afb9e7a373754047fde8503f3211b64935ffb8562f7f391cc4b96c57-d?mw=700&mh=395" alt="테스트" />
+        </div>
+        <div class="list_detail">
+          <div class="lesson_number">
+            Session 5
+          </div>
+          <div class="lesson_title">
+            수익을 일으키는<br/>
+            고객 중심의 상품 혁신전략
+          </div>
+          <div class="lesson_teacher">
+            <span>송인숙</span>
+            <span class="teacher_position">구글 글로벌 전무</span>
+          </div>
+        </div>
+      </div>
+      <div class="play_list">
+        <div class="list_thumbnail">
+          <img src="https://i.vimeocdn.com/video/1258913725-9bb98ec0afb9e7a373754047fde8503f3211b64935ffb8562f7f391cc4b96c57-d?mw=700&mh=395" alt="테스트" />
+        </div>
+        <div class="list_detail">
+          <div class="lesson_number">
+            Session 6
+          </div>
+          <div class="lesson_title">
+            애자일과 OKR로<br/>
+            경영계획 목표관리 하는 방법
+          </div>
+          <div class="lesson_teacher">
+            <span>김경민</span>
+            <span class="teacher_position">가인지컨설팅그룹 대표</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="play_lists countdown">
+      <div class="coming_soon">
+        COMING SOON
+      </div>
+      <div class="open_time">
+        2021년 12월 3일 금요일 PM 7
+      </div>
+      <div class="time"></div>
+    </div>
   </div>
+</div>
   <div class="watch__contents">
     <div class="contents_title">
       자료 다운로드

@@ -1,4 +1,4 @@
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css');
 
 /* COMMON */
 html{
@@ -71,23 +71,19 @@ header
 }
 .login .inner{
   width:100%;
-  margin:auto;
+  height:100%;
+  max-width:922px;
   position:absolute;
   top:0;
-}
-.login .logo{
-  width:500px;
-  height:300px;
-  position:absolute;
   left:0;
   right:0;
-  top:0;
   margin:auto;
-  margin-top:50px;
+  padding-top:172px;
+  box-sizing: border-box;
 }
-.login .logo img
+.login .inner img
 {
-  border-radius:20px;
+  max-height:407px;
 }
 .login .code-group{
   position:absolute;
@@ -97,25 +93,28 @@ header
   left:0;
   right:0;
   margin:auto;
-  top:60vh;
+  margin-top:129px;
 }
 .login .code-group .code-textbox
 {
-  width:570px;
-  height:100px;
+  width:510px;
+  height:62px;
   left:0;
   right:0;
   margin:auto;
   display:flex;
   justify-content: center;
   align-items: center;
+  margin-bottom:66px;
+
 }
 .login .code-group .code-textbox .textbox{
-  width:570px;
+  width:510px;
   padding:10px;
-  border-radius:40px;
+  border-radius:49px;
   text-align:center;
-  font-size:18px;
+  font-size:25px;
+  box-shadow: 0px 0px 15px #00000080;
   box-sizing:border-box;
 }
 .login .code-group .code-textbox .textbox:focus
@@ -240,6 +239,7 @@ header
   box-sizing:border-box;
   margin-right:37px;
   border-radius:12px;
+  cursor: pointer;
 }
 .watch .watch__playlist .play_tabs .tab:last-child
 {
@@ -258,11 +258,48 @@ header
   flex-wrap: wrap;
   margin-top:56px;
 }
+.watch .watch__playlist .play_lists.conf
+{
+  display:none;
+}
+.watch .watch__playlist .play_lists.countdown
+{
+  display:none;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  margin-bottom:70px;
+}
+.watch .watch__playlist .play_lists.countdown .coming_soon
+{
+  width:100%;
+  font-size:60px;
+  font-weight:600;
+  margin-top:64px;
+  margin-bottom:80px;
+}
+.watch .watch__playlist .play_lists.countdown .open_time
+{
+  width:100%;
+  font-size:20px;
+  font-weight:600;
+  margin-bottom:20px;
+}
+.watch .watch__playlist .play_lists.countdown .time
+{
+  font-size:60px;
+  font-weight:600;
+}
 .watch .watch__playlist .play_list
 {
   display:flex;
   width:50%;
   margin-bottom:30px;
+  cursor: pointer;
+}
+.watch .watch__playlist .play_list.active
+{
+  color:#485DFF;
 }
 .watch .watch__playlist .play_list .list_thumbnail
 {
