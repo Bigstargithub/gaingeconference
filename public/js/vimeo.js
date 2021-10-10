@@ -1,3 +1,5 @@
+'use strict'
+
 const playLists = document.querySelectorAll('.play__lists .playlist');
 
 playLists.forEach(playlist => {

@@ -178,7 +178,6 @@ header
 .watch
 {
   width:1060px;
-  height:3000px;
   position:relative;
   margin:0 auto;
   margin-top:40px;
@@ -234,7 +233,7 @@ header
 {
   text-align:center;
   font-size:24px;
-  font-weight:700;
+  font-weight:400;
   color:#485DFF;
   border:1px solid #485DFF;
   padding:12px 22px;
@@ -250,20 +249,90 @@ header
 {
   background-color:#485DFF;
   color:#fff;
+  font-weight:700;
 }
 .watch .watch__playlist .play_lists
 {
   width:100%;
   display:flex;
   flex-wrap: wrap;
+  margin-top:56px;
 }
 .watch .watch__playlist .play_list
 {
-
+  display:flex;
+  width:50%;
+  margin-bottom:30px;
 }
 .watch .watch__playlist .play_list .list_thumbnail
 {
   width:200px;
   height:150px;
   margin-right:30px;
+}
+.watch .watch__playlist .play_list .list_thumbnail img
+{
+  border-radius:12px;
+}
+.watch .watch__playlist .play_list .list_detail
+{
+  font-weight:600;
+  margin:auto 0;
+}
+.watch .watch__playlist .play_list .list_detail .lesson_number
+{
+  font-size:16px;
+  margin-bottom:18px;
+}
+.watch .watch__playlist .play_list .list_detail .lesson_title
+{
+  font-size:20px;
+  margin-bottom:14px;
+  line-height: 26px;
+}
+.watch .watch__playlist .play_list .list_detail .lesson_teacher
+{
+  font-size:14px;
+}
+.watch .watch__playlist .play_list .list_detail .lesson_teacher .teacher_position
+{
+  font-weight:400;
+}
+
+.watch .watch__contents
+{
+  margin-top:50px;
+  margin-bottom:30px;
+}
+.watch .watch__contents .contents_title
+{
+  font-size:24px;
+  font-weight:600;
+}
+.watch .watch__contents .contents_files
+{
+  width:100%;
+  display:flex;
+  flex-wrap: wrap;
+  margin-top:30px;
+  margin-bottom:172px;
+}
+.watch .watch__contents .contents_files .contents_file
+{
+  width:48%;
+  height:80px;
+  margin-right:2%;
+  border-radius:10px;
+  padding:28px;
+  box-sizing: border-box;
+  font-size:20px;
+  font-weight:600;
+  margin-bottom:32px;
+  background:url('img/download_file.svg') 95% center no-repeat;
+  background-color:#EFEFEF;
+}
+.watch .watch__contents .contents_files .contents_file .pdf
+{
+  color:#485DFF;
+  margin-right:20px;
 }
