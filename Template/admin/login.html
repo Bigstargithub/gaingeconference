@@ -1,0 +1,28 @@
+{% extends 'admin/default.html' %}
+{% block content %}
+<section class="login">
+    <div class="inner">
+        <div class="login__img">
+            <img src="/login_img.png" alt="경영전략 컨퍼런스" />
+        </div>
+        <div class="login__form">
+            <form action="/login" method="POST" name="login_form" id="login_form" class="form">
+                <table>
+                    <tr>
+                        <th>아이디</th>
+                        <td>
+                            <input type="text" name="login_id" id="login_id" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>비밀번호</th>
+                        <td>
+                            <input type="password" name="login_pw" id="login_pw" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
