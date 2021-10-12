@@ -1,5 +1,7 @@
 {% extends 'admin/default.html' %}
 {% block content %}
+<script defer src="/admin/login.js"></script>
+
 <section class="login">
     <div class="inner">
         <div class="login__img">
@@ -11,18 +13,20 @@
                     <tr>
                         <th>아이디</th>
                         <td>
-                            <input type="text" name="login_id" id="login_id" />
+                            <input type="text" name="login_id" id="login_id" class="textbox"/>
                         </td>
                     </tr>
                     <tr>
                         <th>비밀번호</th>
                         <td>
-                            <input type="password" name="login_pw" id="login_pw" />
+                            <input type="password" name="login_pw" id="login_pw" class="textbox" />
                         </td>
                     </tr>
                 </table>
+                <div class="login_btn">로그인</div>
             </form>
         </div>
     </div>
 </section>
+
 {% endblock %}

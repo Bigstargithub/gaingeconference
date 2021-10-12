@@ -1,0 +1,24 @@
+{% extends 'admin/header.html' %}
+{% block content %}
+<script defer src="/admin/regcode.js"></script>
+<section class="regcode">
+    <div class="inner">
+        <div class="reg__contents">
+            <div class="reg__title">
+                코드 등록
+            </div>
+            <table class="reg__table">
+                <tr>
+                    <th>전화번호</th>
+                    <td>
+                        <input type="text" name="phone" id="phone" class="textbox" />
+                        <span class="material-icons" id="add_phone">
+                            control_point
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>
+{% endblock %}
