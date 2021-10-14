@@ -16,6 +16,18 @@ a
     color:#fff;
     text-decoration: none;
 }
+.btn
+{
+    width:200px;
+    font-size:16px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius:5px;
+}
 
 /* LOGIN */
 .login
@@ -162,7 +174,7 @@ header .inner .header__menu .menus .menu .menu__contents > ul > a >li
 /* REGCODE */
 .regcode
 {
-
+    display:block;
 }
 .regcode .reg__contents
 {
@@ -184,35 +196,46 @@ header .inner .header__menu .menus .menu .menu__contents > ul > a >li
     color:#1f1f1f;
     margin-bottom:30px;
 }
-.regcode .reg__contents .reg__table
+.regcode .reg__contents .reg__phone
 {
-
+    display:block;
 }
-.regcode .reg__contents .reg__table tr
+.regcode .reg__contents .reg__phone .phone__title
 {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-.regcode .reg__contents .reg__table tr th
-{
-    width:100px;
     font-size:20px;
 }
-.regcode .reg__contents .reg__table tr td
+.regcode .reg__contents .reg__phone .phone__textbox
 {
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    margin-top:10px;
 }
-.regcode .reg__contents .reg__table tr td > .textbox
+.regcode .reg__contents .reg__phone .phone__textbox .textbox
 {
-    padding:5px;
+    width:200px;
     border-radius:5px;
     border:1px solid #1f1f1f;
-    margin-right:15px;
+    padding:10px;
+    display:flex;
+    flex-wrap:wrap;
+    margin-right:5px;
+    margin-bottom:10px;
+    box-sizing: border-box;
 }
-.regcode .reg__contents .reg__table tr td > .textbox:focus
+.regcode .reg__contents .reg__btns .add_btn
 {
+    background-color:#00F5FF;
+    border:1px solid #00f5ff;
+    margin-bottom:15px;
+}
+.regcode .reg__contents .reg__btns .submit_btn
+{
+    color:#1f1f1f;
     border:1px solid #1f1f1f;
+}
+.regcode .reg__contents .reg__excel
+{
+    margin-top:40px;
+}
+.regcode .reg__contents .reg__excel .excel__file
+{
+    font-size:16px;
 }

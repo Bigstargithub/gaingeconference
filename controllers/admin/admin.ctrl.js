@@ -1,3 +1,9 @@
+const xl = require('excel4node');
+const csv = require('csv-parser')
+const fs = require('fs')
+const model = require('../../models');
+
+
 exports.get_login = (req, res) => {
     if(req.session.admin_enter === 'OK')
     {
@@ -33,4 +39,28 @@ exports.get_codelist = (req, res) => {
 
 exports.get_regcode = (req, res) => {
     return res.render('admin/reg_code')
+}
+exports.post_sendcode = (req, res) => {
+    const { phone } = req.body
+}
+exports.post_excelcode = (req, res) => {
+    const result = []
+    fs.createReadStream('upload/test.csv')
+    .pipe(csv())
+    .on('data', data => {
+        result.push(data)
+    })
+    .on('end', () => {
+        let object_result = {}
+        result.map(phones => {
+            phones[Object.keys(phones)[0]] = phones[Object.keys(phones)[0]].replace(/-/g,'')
+            // model.code_list.create({
+            //     code_list: phones[Object.keys(phones)[0]]
+            // })
+            model.code_list.create({
+                code: phones[Object.keys(phones)[0]]
+            })
+        })
+        return res.send("<script>alert('저장되었습니다.');location.href='/admin/main'</script>")
+    })
 }

@@ -1,7 +1,7 @@
-const { Sequelize } = require('sequelize');
+const Sequelize = require('sequelize');
 const path = require('path');
 const fs = require('fs');
-const dotenv = require('dotenv');
+let dotenv = require('dotenv');
 
 dotenv.config();
 
@@ -14,7 +14,12 @@ const sequelize = new Sequelize(process.env.DATABASE,
     pool: {
       max:5,
       min:0,
-      idle: 5000,
+      idle: 10000,
+    },
+    define:
+    {
+      charset: 'utf8mb4',
+      collate: 'utf8mb4_general_ci',
     }
   });
 
@@ -22,12 +27,12 @@ let db = [];
 
 fs.readdirSync(__dirname)
   .filter(file => {
-      file.indexOf('.js') && file !== 'index.js';
+      return file.indexOf('.js') && file !== 'index.js';
   })
   .forEach(file => {
     const model = require(path.join(__dirname, file))(
-      seqeulize,
-      sequelize.DataType,
+      sequelize,
+      sequelize.DataTypes,
     )
     db[model.name] = model;
   });

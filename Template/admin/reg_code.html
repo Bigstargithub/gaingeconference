@@ -7,17 +7,32 @@
             <div class="reg__title">
                 코드 등록
             </div>
-            <table class="reg__table">
-                <tr>
-                    <th>전화번호</th>
-                    <td>
-                        <input type="text" name="phone" id="phone" class="textbox" />
-                        <span class="material-icons" id="add_phone">
-                            control_point
-                        </span>
-                    </td>
-                </tr>
-            </table>
+            <div class="reg__phone">
+                <div class="phone__title">
+                    전화번호
+                </div>
+                <div class="phone__textbox">
+                    <input type="text" class="textbox" />
+                </div>
+            </div>
+            <div class="reg__btns">
+                <div class="add_btn btn">
+                    추가
+                </div>
+                <div class="submit_btn btn">
+                    등록
+                </div>
+            </div>
+            <div class="reg__excel">
+                <div class="reg__title">
+                    엑셀로 등록
+                </div>
+                <div class="excel__file">
+                    <form action="/admin/reg/excel" method="POST" name="excel_form" enctype="multipart/form-data">
+                        <input type="file" name="excel_file" id="excel_file" />
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </section>

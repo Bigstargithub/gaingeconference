@@ -5,7 +5,6 @@ const session = require('express-session');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 const path = require('path');
-const { nextTick } = require('process');
 const db = require('./models');
 const { Sequelize } = require('./models')
 
@@ -77,6 +76,7 @@ class App {
     this.app.use(express.static(path.join(__dirname, 'public')));
     this.app.use(express.static('public/img'));
     this.app.use(express.static('public/js'))
+    this.app.use(express.static('upload/'))
   }
 
   getRouting() {
