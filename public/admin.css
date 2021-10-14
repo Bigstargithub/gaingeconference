@@ -179,13 +179,11 @@ header .inner .header__menu .menus .menu .menu__contents > ul > a >li
 .regcode .reg__contents
 {
     max-width:1100px;
-    height:1200px;
     position:absolute;
     left:0;
     right:0;
     top:80px;
     margin:auto;
-    background-color: orange;
     padding:20px;
     box-sizing: border-box;
 }

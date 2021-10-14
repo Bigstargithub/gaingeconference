@@ -1,5 +1,11 @@
 'use strict'
 
+function enter() {
+    if(window.event.keyCode == 13)
+    {
+        document.querySelector('.login_btn').click()
+    }
+}
 const loginBtn = document.querySelector('.login_btn');
 loginBtn.addEventListener('click', function() {
     const login_id = document.querySelector('#login_id').value

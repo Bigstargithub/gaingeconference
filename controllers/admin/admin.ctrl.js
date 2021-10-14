@@ -3,7 +3,6 @@ const csv = require('csv-parser')
 const fs = require('fs')
 const model = require('../../models');
 
-
 exports.get_login = (req, res) => {
     if(req.session.admin_enter === 'OK')
     {
@@ -42,7 +41,15 @@ exports.get_regcode = (req, res) => {
 }
 exports.post_sendcode = (req, res) => {
     const { phone } = req.body
+    let phone_num = phone;
+    phone_num = phone.replace(/-/g, '')
+    model.code_list.create({
+        code: phone_num
+    })
+
+    return res.send('success')
 }
+
 exports.post_excelcode = (req, res) => {
     const result = []
     fs.createReadStream('upload/test.csv')
@@ -51,12 +58,8 @@ exports.post_excelcode = (req, res) => {
         result.push(data)
     })
     .on('end', () => {
-        let object_result = {}
         result.map(phones => {
             phones[Object.keys(phones)[0]] = phones[Object.keys(phones)[0]].replace(/-/g,'')
-            // model.code_list.create({
-            //     code_list: phones[Object.keys(phones)[0]]
-            // })
             model.code_list.create({
                 code: phones[Object.keys(phones)[0]]
             })
