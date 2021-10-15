@@ -67,32 +67,28 @@ header
   width:100%;
   height:100%;
   object-fit: fill;
+  position:fixed;
+  top:0;
 }
 .login .inner{
   width:100%;
   height:100%;
   max-width:922px;
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
   margin:auto;
-  padding-top:172px;
   box-sizing: border-box;
+}
+.login .inner .login__img
+{
+  margin-top:127px;
 }
 .login .inner img
 {
   max-height:407px;
 }
 .login .code-group{
-  position:absolute;
-  /* bottom:0;
-  height:100px; */
-  height:20%;
-  left:0;
-  right:0;
   margin:auto;
   margin-top:129px;
+  margin-bottom:180px;
 }
 .login .code-group .code-textbox
 {
