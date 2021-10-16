@@ -19,7 +19,24 @@ function callPlayer(playID)
 {
   return player.loadVideo(playID)
 }
-
+let interval = '';
 player.on('play', function() {
-  console.log('play the video');
+  interval = setInterval(() => {
+    axios.post('/update/session', {
+
+    }).then(response => {
+        return console.log(response.data)
+    }).catch(err => {
+        return console.error(err)
+    });
+
+    
+player.getPaused().then(function(paused) {
+  if(paused) 
+  {
+    console.log('hihi')
+    clearInterval(interval)
+  }
+})
+}, 5000)
 });

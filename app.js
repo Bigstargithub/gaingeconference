@@ -57,6 +57,7 @@ class App {
       cookie: {
         httpOnly: true,
         secure: false,
+        maxAge: 60 * 10 * 1000,
       },
     }));
   }

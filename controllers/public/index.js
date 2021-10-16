@@ -9,4 +9,6 @@ router.post('/enter', ctrl.post_enter)
 
 router.get('/watch', ctrl.get_watch)
 
+router.post('/update/session',ctrl.update_session)
+
 module.exports = router;

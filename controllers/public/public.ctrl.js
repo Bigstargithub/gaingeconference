@@ -1,3 +1,5 @@
+const model = require('../../models')
+
 exports.get_main = (req, res) => {
   if(req.session.enter === 'OK')
   {
@@ -6,12 +8,19 @@ exports.get_main = (req, res) => {
   return res.render('login');
 }
 
-exports.post_enter = (req, res) => {
+exports.post_enter = async (req, res) => {
   const {enterCode} = req.body;
 
-  if(enterCode === 'sample1234')
+  const count_code = await model.code_list.count({
+    where: {code: enterCode}
+  })
+
+  console.log(count_code)
+
+  if( count_code > 0 )
   {
     req.session.enter = 'OK'
+    req.session.cookie.expire = new Date(Date.now()) + (60 * 10 * 1000);
     return res.send('success')
   }
   else
@@ -22,4 +31,9 @@ exports.post_enter = (req, res) => {
 
 exports.get_watch = (req, res) => {
   return res.render('watch');
+}
+
+exports.update_session = (req, res) => {
+  req.session.enter = 'OK'
+  return res.send('Playing');
 }

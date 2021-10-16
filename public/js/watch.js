@@ -40,6 +40,9 @@ setInterval(() => {
 
     time.textContent = `${setDay}일 ${setHour}:${setMin}:${setSec}`
 },1000)
+
+
+
 tabs.forEach(tab => {
     tab.addEventListener('click', function() {
         tab.classList.add('active');
