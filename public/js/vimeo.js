@@ -1,10 +1,22 @@
 'use strict'
 
 const playLists = document.querySelectorAll('.play_lists .play_list');
+let widthVideo = 1060;
+let heightVideo = 596;
+if(window.innerWidth < 1060)
+{
+  widthVideo = window.innerWidth;
+}
+if(window.innerWidth < 757)
+{
+  heightVideo = 440;
+}
+const play = document.querySelector('.watch__player #player iframe')
+console.log(play);
 var options = {
   id: 616891145,
-  width:1060,
-  height:596,
+  width:widthVideo,
+  height: heightVideo,
   loop: false
 }
 var player = new Vimeo.Player('player', options)
