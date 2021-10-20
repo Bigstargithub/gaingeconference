@@ -37,3 +37,7 @@ exports.update_session = (req, res) => {
   req.session.enter = 'OK'
   return res.send('Playing');
 }
+
+exports.get_watch_live = (_ , res) => {
+  return res.render('live')
+}

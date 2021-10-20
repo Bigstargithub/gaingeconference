@@ -1,11 +1,21 @@
 'use strict'
 
-const tabs = document.querySelectorAll('.play_tabs .tab');
-const playlists = document.querySelectorAll('.play_lists .play_list');
 const time = document.querySelector('.countdown .time')
+const live = document.querySelector('.watch__live .live-link')
+const today = new Date();
+
+
+function isSetTimeover() {
+    const openDate = new Date("2021-12-03 00:00:00")
+    if(openDate > today)
+    return true;
+    else
+    return false;
+
+}
 
 setInterval(() => {
-    let today = new Date();
+    const today = new Date();
     let timeset = new Date('2021-12-03 19:00:00');
 
     // 기본 시간 셋팅
@@ -43,41 +53,25 @@ setInterval(() => {
 
 
 
-tabs.forEach(tab => {
-    tab.addEventListener('click', function() {
-        tab.classList.add('active');
-        let today = new Date();
-        if(tab.dataset.play === 'conf' && today < new Date('2021-12-03 13:00:00'))
-        {
-            tab.dataset.play = 'countdown'
-        }
-
-        const playlists = document.querySelector(`.${tab.dataset.play}`);
-        playlists.style.display = 'flex';
-        let sibling = '';
-
-        if(tab.nextElementSibling !== null)
-        {
-            sibling =  tab.nextElementSibling;
-        }
-        else if(tab.previousElementSibling !== null)
-        {
-            sibling = tab.previousElementSibling;
-        }
-        sibling.classList.remove('active')
-
-        const sibling_playlists = document.querySelector(`.${sibling.dataset.play}`);
-        sibling_playlists.style.display = 'none';
-
-        return tab;
-    })
+live.addEventListener('click', function() {
+    
+    if(isSetTimeover())
+    {
+        const errorOpen = document.querySelector(".error.open");
+        errorOpen.style.display = 'block'
+    }
+    else
+    {
+        location.href = "/watch/live"
+    }
+    
 })
 
-playlists.forEach(playlist => {
-    playlist.addEventListener('click', function() {
-        playlists.forEach(list => {
-            list.classList.remove('active');
-        })
-        playlist.classList.add('active')
-    })
-})
+
+// const closeBtns = document.querySelectorAll('.error .error__message .error__close')
+// closeBtns.forEach(closeBtn => {
+//   closeBtn.addEventListener('click',() => {
+//     console.log(closeBtn.parentElement.parentElement);
+//     closeBtn.parentElement.parentElement.parentElement.style.display = 'none'
+//   })
+// })

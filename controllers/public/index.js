@@ -11,4 +11,6 @@ router.get('/watch', ctrl.get_watch)
 
 router.post('/update/session',ctrl.update_session)
 
+router.get('/watch/live', ctrl.get_watch_live)
+
 module.exports = router;

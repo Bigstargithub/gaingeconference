@@ -2,8 +2,13 @@
 {% block content %}
 <script defer src="/vimeo.js"></script>
 <script defer src="/watch.js"></script>
+<script defer src="/common.js"></script>
+<script defer src="/file.js"></script>
 
 <section class="watch">
+  <div class="watch__live">
+    <div class="live-link"></div>
+  </div>
   <div class="watch__player">
     <div id="player"></div>
   </div>
@@ -43,11 +48,10 @@
             Lesson 1
           </div>
           <div class="lesson_title">
-            V모델<br/>
-            영상 제목
+            전체 개요
           </div>
           <div class="lesson_teacher">
-            <span>김경민</span>
+            <span class="teacher_name">김경민</span>
             <span class="teacher_position">가인지컨설팅그룹 대표</span>
           </div>
         </div>
@@ -59,71 +63,70 @@
         </div>
         <div class="list_detail">
           <div class="lesson_number">
-            Lesson 1
+            Lesson 2
           </div>
           <div class="lesson_title">
-            V모델<br/>
-            영상 제목
+            1단계<br />
+            ABC 피드백 경영계획 수립
           </div>
           <div class="lesson_teacher">
-            <span>김경민</span>
+            <span class="teacher_name">김경민</span>
             <span class="teacher_position">가인지컨설팅그룹 대표</span>
           </div>
         </div>
       </div>
-      <div class="play_list">
+      <div class="play_list" data-id="596392788">
         <div class="list_thumbnail">
           <img src="/play_img.svg" alt="재생 버튼" class="play_img"/>
           <img src="https://i.vimeocdn.com/video/1258913725-9bb98ec0afb9e7a373754047fde8503f3211b64935ffb8562f7f391cc4b96c57-d?mw=700&mh=395" alt="테스트" />
         </div>
         <div class="list_detail">
           <div class="lesson_number">
-            Lesson 1
+            Lesson 3
           </div>
           <div class="lesson_title">
-            V모델<br/>
-            영상 제목
+            2단계<br />
+            중기 전략맵 경영계획 수립
           </div>
           <div class="lesson_teacher">
-            <span>김경민</span>
+            <span class="teacher_name">김경민</span>
             <span class="teacher_position">가인지컨설팅그룹 대표</span>
           </div>
         </div>
       </div>
-      <div class="play_list">
+      <div class="play_list" data-id="596392788">
         <div class="list_thumbnail">
           <img src="/play_img.svg" alt="재생 버튼" class="play_img"/>
           <img src="https://i.vimeocdn.com/video/1258913725-9bb98ec0afb9e7a373754047fde8503f3211b64935ffb8562f7f391cc4b96c57-d?mw=700&mh=395" alt="테스트" />
         </div>
         <div class="list_detail">
           <div class="lesson_number">
-            Lesson 1
+            Lesson 4
           </div>
           <div class="lesson_title">
-            V모델<br/>
-            영상 제목
+            3단계<br />
+            경영계획 캔버스
           </div>
           <div class="lesson_teacher">
-            <span>김경민</span>
+            <span class="teacher_name">김경민</span>
             <span class="teacher_position">가인지컨설팅그룹 대표</span>
           </div>
         </div>
       </div>
-      <div class="play_list">
+      <div class="play_list" data-id="596392788">
         <div class="list_thumbnail">
           <img src="/play_img.svg" alt="재생 버튼" class="play_img"/>
           <img src="https://i.vimeocdn.com/video/1258913725-9bb98ec0afb9e7a373754047fde8503f3211b64935ffb8562f7f391cc4b96c57-d?mw=700&mh=395" alt="테스트" />
         </div>
         <div class="list_detail">
           <div class="lesson_number">
-            Lesson 1
+            Lesson 5
           </div>
           <div class="lesson_title">
-            V모델<br/>
-            영상 제목
+            TIP과 주의사항
           </div>
           <div class="lesson_teacher">
-            <span>김경민</span>
+            <span class="teacher_name">김경민</span>
             <span class="teacher_position">가인지컨설팅그룹 대표</span>
           </div>
         </div>
@@ -261,22 +264,67 @@
       자료 다운로드
     </div>
     <div class="contents_files">
-      <div class="contents_file">
+      <div class="file">
         <span class="pdf">PDF</span>
         산업별 OKR 제목 샘플
       </div>
-      <div class="contents_file">
+      <div class="file">
         <span class="pdf">PDF</span>
-        산업별 OKR 제목 샘플
+        경영계획판 템플릿
       </div>
-      <div class="contents_file">
+      <div class="file conf">
         <span class="pdf">PDF</span>
-        산업별 OKR 제목 샘플
+        컨퍼런스 요약 자료집
       </div>
-      <div class="contents_file">
+      <div class="file magazine">
         <span class="pdf">PDF</span>
-        산업별 OKR 제목 샘플
+        가인지 경영전략 매거진
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="error open" style="display:none">
+  <div class="inner">
+    <div class="error__message">
+      <div class="error__title">
+        2021년 12월 3일 OPEN!
+      </div>
+      <div class="error__info">
+        2022년 경영전략 컨퍼런스는 <br />
+        온라인 생중계로 진행되므로 당일에 공개됩니다.
+      </div>
+      <div class="error__close"></div>
+    </div>
+  </div>
+</section>
+
+<section class="error magazine" style="display:none;">
+  <div class="inner">
+    <div class="error__message">
+      <div class="error__title">
+        11월 17일 OPEN!
+      </div>
+      <div class="error__info">
+        가인지 매거진은 11월 17일부터<br />
+        다운로드 받을 수 있습니다.
+      </div>
+      <div class="error__close"></div>
+    </div>
+  </div>
+</section>
+
+<section class="error conf" style="display:none;">
+  <div class="inner">
+    <div class="error__message">
+      <div class="error__title">
+        12월 04일 OPEN!
+      </div>
+      <div class="error__info">
+        컨퍼런스 요약집은 12월 4일부터<br />
+        다운로드 받을 수 있습니다.
+      </div>
+      <div class="error__close"></div>
     </div>
   </div>
 </section>

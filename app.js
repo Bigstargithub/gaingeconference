@@ -78,6 +78,7 @@ class App {
     this.app.use(express.static('public/img'));
     this.app.use(express.static('public/js'))
     this.app.use(express.static('upload/'))
+    this.app.use(express.static('public/download'))
   }
 
   getRouting() {
