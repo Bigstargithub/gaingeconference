@@ -61,6 +61,7 @@ header
   position:relative;
   width:100%;
   min-height:100vh;
+  display:flex;
 }
 .login video
 {
@@ -72,24 +73,21 @@ header
 }
 .login .inner{
   width:100%;
-  height:100%;
+  height:auto;
   max-width:922px;
   margin:auto;
   box-sizing: border-box;
 }
 .login .inner .login__img
 {
-  /* margin-top:127px; */
-  padding-top:127px;
+  text-align:center;
 }
 .login .inner img
 {
   max-height:407px;
 }
 .login .code-group{
-  margin:auto;
-  margin-top:129px;
-  margin-bottom:180px;
+  margin-top:75px;
 }
 .login .code-group .code-textbox
 {
@@ -101,7 +99,7 @@ header
   display:flex;
   justify-content: center;
   align-items: center;
-  margin-bottom:66px;
+  margin-bottom:45px;
 
 }
 .login .code-group .code-textbox .textbox{
@@ -112,6 +110,7 @@ header
   font-size:25px;
   box-shadow: 0px 0px 15px #00000080;
   box-sizing:border-box;
+  border:1px solid #1f1f1f;
 }
 .login .code-group .code-textbox .textbox:focus
 {
@@ -125,13 +124,15 @@ header
 }
 .login .code-group .code-confirm .btn
 {
-  width:150px;
+  /* width:252px; */
+  height:62px;
   background:rgba(0, 0, 0, 0);
   color:#fff;
-  padding:10px;
-  border:1px solid #fff;
-  border-radius:40px;
+  padding:16px 49px;
+  border:3px solid #fff;
+  border-radius:49px;
   cursor:pointer;
+  font-size:24px;
 }
 .login .code-group .code-confirm .btn:hover
 {
@@ -176,17 +177,17 @@ header
 .error__message .error__title
 {
   font-size:40px;
-  height:48px;
+  height:52px;
   color:#1f1f1f;
   font-weight:700;
-  margin-bottom:25px;
+  margin-bottom:26px;
 }
 .error__message .error__info
 {
   font-size:24px;
-  height:62px;
+  height:58px;
   color:#566371;
-  margin-bottom:37px;
+  margin-bottom:36px;
   line-height:32px;
 }
 .error__message .error__close
@@ -247,14 +248,14 @@ header
 }
 .watch .watch__title .lesson_number
 {
-  font: normal normal bold 20px/36px Spoqa Han Sans Neo;
   font-size:20px;
+  font-weight:700;
 }
 .watch .watch__title .lesson_title
 {
-  font: normal normal bold 36px/40px Spoqa Han Sans Neo;
   font-size:36px;
   margin-top:10px;
+  font-weight: 700;
 }
 .watch .watch__title .lesson_teacher
 {
@@ -486,6 +487,11 @@ header
 {
   font-size:46px;
   margin-bottom:28px;
+  line-height:64px;
+}
+.live .inner .live__title .session-title.mo
+{
+  display:none;
 }
 .live .live__fileLists
 {
@@ -516,6 +522,7 @@ header
   margin-right:40px;
   margin-bottom:32px;
   cursor:pointer;
+  border-radius:10px;
 }
 .live .live__fileLists .files .file .pdf
 {
@@ -638,11 +645,15 @@ header
   }
 
   /* LOGIN */
+  .login .inner
+  {
+    padding:0 60px;
+  }
   .login .inner .login__img
   {
-
+/* 
     padding:0 8.3%;
-    padding-top:127px;
+    padding-top:127px; */
     box-sizing: inherit;
   }
   .login .code-group .code-textbox .textbox
@@ -705,6 +716,10 @@ header
   {
     /* height:442px; */
   }
+  .watch .watch__player #player iframe
+  {
+    border-radius:0;
+  }
   .live .live__fileLists .files .file
   {
     width:48%;
@@ -716,7 +731,7 @@ header
     margin-right:0;
   }
 }
-@media (max-width:768px) and (min-width:376px){
+@media (max-width:768px){
 
   /* COMMON */
   .inner
@@ -730,11 +745,15 @@ header
   }
   .login .inner{
     width:100%;
-    padding:0 40px;
+    height:fit-content;
+    padding:0 60px;
+    /* padding-top:38%; */
   }
   .login .inner .login__img
   {
-    padding-top:127px;
+    /* padding-top:127px; */
+    margin-top:0;
+    padding-top:0;
   }
   .login .inner img
   {
@@ -756,9 +775,9 @@ header
   .login .code-group .code-textbox .textbox
   {
     width:100%;
-    padding:20px;
+    padding:2.5vw;
     border:1px solid #1f1f1f;
-    font-size:16px;
+    font-size:4vw;
   }
   .login .code-group .code-confirm
   {
@@ -767,50 +786,61 @@ header
   }
   .login .code-group .code-confirm .btn
   {
-    padding:10px;
-    font-size:20px;
+    height:auto;
+    padding:2vw 6vw;
+    font-size:4vw;
   }
   .error .inner
   {
     padding:0 4%;
+    height:100%;
     box-sizing: border-box;
   }
   .error__message
   {
-    height:380px;
+    height:50.67vw;
     /* margin-top:606px; */
-    padding:62px 20px 46px;
+    padding:8.267vw 2.67vw 6.13vw;
   }
   .error__message .error__title
   {
-    font-size:28px;
-    height:64px;
+    font-size:6.2vw;
+    height:8.53vw;
+    margin-bottom:3.33vw;
   }
   .error__message .error__info
   {
-    height:72px;
-    margin-bottom:48px;
-    font-size:15px;
+    height:9.8vw;
+    margin-bottom:6.4vw;
+    font-size:3.2vw;
+    line-height:4.26vw;
+  }
+  .error__message .error__close
+  {
+    height:9.6vw;
+    width:66.67vw;
+    margin:auto;
+    border-radius:5px;
   }
 
   /* HEADER */
   header
   {
-    height:110px;
+    height:14.67vw;
   }
   .header-container
   {
-    padding:0 46px;
+    padding:0 6.13vw;
   }
   .header__left
   {
-    width:216px;
-    height:34px;
+    width:28.8vw;
+    height:4.53vw;
   }
   .header__left .header__logo .logo
   {
-    width:216px;
-    height:34px;
+    width:28.8vw;
+    height:4.53vw;
   }
 
   /* WATCH */
@@ -821,8 +851,8 @@ header
   }
   .watch__live
   {
-    height:200px;
-    margin: 20px 0;
+    height:26.67vw;
+    margin: 2.67vw 0;
   }
   .watch__live .live-link
   {
@@ -834,25 +864,33 @@ header
     width:100%;
     display:block;
   }
+  .watch .watch__player #player iframe
+  {
+    border-radius:0;
+  }
+
   .watch .watch__title
   {
     padding:0 6.1%;
+    margin-top:6.93vw;
   }
   .watch .watch__title .lesson_number
   {
-    font-size:30px;
+    font-size:4vw;
   }
   .watch .watch__title .lesson_title {
-    font-size:42px;
-    margin-top:20px;
+    font-size:5.6vw;
+    margin-top:2.67vw;
+    font-weight: 700;
   }
   .watch .watch__title .lesson_teacher {
-    margin-top:30px;
-    font-size:26px;
+    margin-top:4vw;
+    font-size:3.5vw;
+    margin-bottom:10.67vw;
   }
   .watch__playlist
   {
-    padding:0 6.1%;
+    padding:0 4%;
   }
   .watch .watch__playlist .play_list
   {
@@ -860,23 +898,32 @@ header
   }
   .watch .watch__playlist .play_tabs .tab
   {
-    margin-right:20px;
+    margin-right:2.67vw;
+    font-size:3.2vw;
+    padding:1.6vw 2.93vw;
+    border-radius:1.6vw;
+  }
+  .watch .watch__playlist .play_lists
+  {
+    margin-top:7.47vw;
   }
   .watch .watch__playlist .play_list {
-    margin-bottom:50px;
+    margin-bottom:6.67vw;
   }
 
   .watch .watch__playlist .play_list .list_thumbnail
   {
-    max-width:240px;
+    /* max-width:240px;
     max-height:180px;
     min-width:120px;
-    min-height:90px;
+    min-height:90px; */
+    width:auto;
+    height:24.8vw;
   }
   .watch .watch__playlist .play_list .list_thumbnail .play_img
   {
-    width:48px;
-    height:48px;
+    width:6.4vw;
+    height:6.4vw;
   }
   .watch .watch__playlist .play_list .list_detail
   {
@@ -884,29 +931,37 @@ header
   }
   .watch .watch__playlist .play_list .list_detail .lesson_number
   {
-    font-size:16px;
-    margin-bottom:10px;
+    font-size:2.8vw;
+    margin-bottom:1.33vw;
+    height:3.2vw;
   }
   .watch .watch__playlist .play_list .list_detail .lesson_title
   {
-    font-size:18px;
-    height:60px;
-    line-height: 28px;
-    margin-bottom:20px;
-    min-width:200px;
+    font-size:4.2vw;
+    height:11.2vw;
+    line-height: 5vw;
+    margin-bottom:4vw;
+    /* min-width:200px; */
   }
   .watch .watch__playlist .play_list .list_detail .lesson_teacher
   {
-    font-size:14px;
+    font-size:2.8vw;
     line-height:23px;
   }
   .watch .watch__playlist .play_list .list_detail .lesson_teacher .teacher_name
   {
-    display:block;
+    /* display:block; */
   }
   .watch .watch__contents
   {
     padding:0 6.1%;
+    margin-top:6.67vw;
+    margin-bottom:4vw;
+  }
+  .watch .watch__contents .contents_files
+  {
+    margin-top:4vw;
+    margin-bottom:22.93vw;
   }
   .watch .watch__contents .contents_files .contents_file
   {
@@ -921,24 +976,32 @@ header
   .watch .watch__contents .contents_files .file
   {
     width:100%;
-    height:70px;
+    /* height:70px; */
+    height:auto;
     margin-right:0;
-    font-size:15px;
+    font-size:3.8vw;
+    padding:3.73vw;
+    margin-bottom:4.27vw;
+    background-size:4.47vw;
   }
   .watch .watch__playlist .play_lists.countdown .coming_soon
   {
-    font-size:45px;
+    font-size:8vw;
   }
   .watch .watch__playlist .play_lists.countdown .open_time
   {
-    font-size:16px;
+    font-size:3.2vw;
   }
   .watch .watch__playlist .play_lists.countdown .time
   {
-    font-size:45px;
+    font-size:8vw;
   }
 
   /* LIVE */
+  .live
+  {
+    min-width:280px;
+  }
   .live__player
   {
     height:442px;
@@ -954,193 +1017,31 @@ header
   {
     margin-bottom:80px;
   }
+  .live .inner .live__title .session-number
+  {
+    font-size:4vw;
+  }
   .live .inner .live__title .session-title
   {
-    line-height:46px;
-    font-size:32px;
+    line-height:8.53vw;
+    font-size:6.4vw;
+  }
+  .live .inner .live__title .session-title.mo
+  {
+    display:block;
+  }
+  .live .inner .live__title .session-title.pc
+  {
+    display:none;
   }
   .live .live__fileLists .files .file
   {
     width:100%;
     margin-right:0;
-    font-size:20px;
+    font-size:3.73vw;
   }
   .live .live__fileLists .fileLists__title
   {
-    font-size:32px;
-  }
-}
-@media (max-width:375px)
-{
-
-  /* COMMON */
-  .inner
-  {
-    width:100%;
-  }
-
-  /* LOGIN */
-  .login
-  {
-   
-  }
-  .login .inner
-  {
-    padding:0 30px;
-    box-sizing: border-box;
-    min-width:260px;
-  }
-  .login .inner img
-  {
-    
-  }
-  .login .code-group
-  {
-    margin-top:50px;
-    min-width:260px;
-    position:absolute;
-    left:0;
-    right:0;
-  }
-  .login .code-group .code-textbox
-  {
-    width:100%;
-    margin-bottom:30px;
-  }
-  .login .code-group .code-textbox .textbox
-  {
-    width:260px;
-    font-size:16px;
-  }
-  .login .code-group .code-confirm .btn
-  {
-    font-size:18px;
-  }
-  .error .inner
-  {
-    padding:0 4%;
-    box-sizing: border-box;
-    min-width:280px;
-  }
-  .error__message
-  {
-    padding:62px 20px 46px;
-  }
-  /* LOGIN ERROR */
-  .error__message .error__title
-  {
-    font-size:20px;
-    line-height:30px;
-  }
-  .error__message .error__info
-  {
-    font-size:14px;
-    line-height: 25px;
-  }
-
-  /* WATCH */
-  .watch
-  {
-    margin-top:0;
-  }
-  .watch__live
-  {
-    margin:0;
-    height:130px; 
-  }
-  .watch .watch__player
-  {
-    width:100%;
-  }
-  .watch .watch__title,
-  .watch .watch__playlist,
-  .watch .watch__contents
-  {
-    padding:0 5%;
-  }
-  .watch .watch__playlist .play_list
-  {
-    width:100%;
-    display:block;
-  }
-  .watch .watch__playlist .play_tabs .tab
-  {
-    font-size:12px;
-    padding:10px;
-    margin-right:20px;
-  }
-  .watch .watch__playlist .play_list .list_thumbnail
-  {
-    width:100%;
-    height:auto;
-  }
-  .watch .watch__playlist .play_list .list_detail
-  {
-    margin-top:10px;
-  }
-  .watch .watch__playlist .play_list .list_detail .lesson_number
-  {
-    margin-bottom:10px;
-  }
-  .watch .watch__playlist .play_list .list_detail .lesson_title
-  {
-    font-size:16px;
-    line-height:20px;
-    height:auto;
-    margin-bottom:10px;
-  }
-  .watch .watch__playlist .play_list .list_detail .lesson_teacher
-  {
-    line-height:17px;
-  }
-  .watch .watch__playlist .play_list .list_detail .lesson_teacher .teacher_name
-  {
-    display:block;
-  }
-  .watch .watch__contents .contents_files .file
-  {
-    width:100%;
-    margin-right:0;
-    font-size:12px;
-    height:60px;
-    padding:25px;
-  }
-  .watch .watch__playlist .play_lists.countdown .coming_soon,
-  .watch .watch__playlist .play_lists.countdown .time
-  {
-    font-size:40px;
-  }
-  
-  .watch .watch__contents .contents_files
-  {
-    margin-bottom:50px;
-  }
- 
-  /* LIVE */
-  .live .inner
-  {
-    padding:0 4%;
-    box-sizing: border-box;
-    margin-top:52px;
-    min-width:280px;
-  }
-  .live__player
-  {
-    height:442px;
-    /* height:442px; */
-  }
-  .live .inner .live__title
-  {
-    margin-bottom:80px;
-  }
-  .live .inner .live__title .session-title
-  {
-    font-size:24px;
-  }
-  .live .live__fileLists .files .file
-  {
-    margin-right:0;
-    font-size:14px;
-    padding:26px 34px 26px 16px;
+    font-size:4.8vw;
   }
 }
