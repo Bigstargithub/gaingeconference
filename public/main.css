@@ -974,10 +974,6 @@ header
 {
 
   /* COMMON */
-  body
-  {
-    min-width:280px;
-  }
   .inner
   {
     width:100%;
@@ -1065,6 +1061,7 @@ header
   .watch .watch__playlist .play_list
   {
     width:100%;
+    display:block;
   }
   .watch .watch__playlist .play_tabs .tab
   {
@@ -1074,14 +1071,12 @@ header
   }
   .watch .watch__playlist .play_list .list_thumbnail
   {
-    max-width:240px;
-    max-height:180px;
-    min-width:120px;
-    min-height:90px;
+    width:100%;
+    height:auto;
   }
   .watch .watch__playlist .play_list .list_detail
   {
-    min-width:106px;
+    margin-top:10px;
   }
   .watch .watch__playlist .play_list .list_detail .lesson_number
   {
@@ -1091,8 +1086,8 @@ header
   {
     font-size:16px;
     line-height:20px;
-    height:70px;
-    margin-bottom:0;
+    height:auto;
+    margin-bottom:10px;
   }
   .watch .watch__playlist .play_list .list_detail .lesson_teacher
   {
