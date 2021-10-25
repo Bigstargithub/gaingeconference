@@ -23,6 +23,20 @@ function onYouTubeIframeAPIReady(){
     })
 }
 
+function onPlayerReady(event) {
+    event.target.playVideo();
+    console.log(event)
+}
+console.log(player)
+
+function onPlayerStateChange(event) {
+    if(event.data == YT.PlayerState.PLAYING)
+    {
+        console.log("hihi");
+    }
+}
+
+
 
 //playlist 클릭
 const liveTitles = document.querySelector('.live__title')

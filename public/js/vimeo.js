@@ -34,7 +34,7 @@ function callPlayer(playID)
 let interval = '';
 player.on('play', function() {
   interval = setInterval(() => {
-    axios.post('/update/session', {
+    axios.put('/watch', {
 
     }).then(response => {
         return console.log(response.data)

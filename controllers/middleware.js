@@ -5,7 +5,7 @@ const is_login = (req, res, next) => {
   }
   else
   {
-    return res.send('<script>alert("입장코드를 입력하세요");location.href="/";</script>')
+    return res.send(`<script>alert("입장 시간이 만료되었습니다. 입장코드를 다시 입력하시기 바랍니다.");location.href="/";</script>`)
   }
 }
 
