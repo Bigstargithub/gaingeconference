@@ -17,9 +17,10 @@ img
   width:100%;
   height:100%;
 }
-a
+a,a:link
 {
   text-decoration: none;
+  color:#1f1f1f;
 }
 
 /* HEADER */
@@ -256,6 +257,7 @@ header
   font-size:36px;
   margin-top:10px;
   font-weight: 700;
+  line-height:40px;
 }
 .watch .watch__title .lesson_teacher
 {
@@ -426,7 +428,7 @@ header
 .watch .watch__contents .contents_files .file
 {
   width:510px;
-  height:80px;
+  /* height:80px; */
   margin-right:40px;
   border-radius:10px;
   padding:28px;
@@ -437,6 +439,10 @@ header
   background:url('img/download_file.svg') 95% center no-repeat;
   background-color:#EFEFEF;
   cursor:pointer;
+}
+.watch .watch__contents .contents_files .file.no-margin
+{
+  margin-right:0;
 }
 .watch .watch__contents .contents_files .file:nth-child(2),
 .watch .watch__contents .contents_files .file:nth-child(4)
@@ -882,6 +888,7 @@ header
     font-size:5.6vw;
     margin-top:2.67vw;
     font-weight: 700;
+    line-height:8.53vw;
   }
   .watch .watch__title .lesson_teacher {
     margin-top:4vw;

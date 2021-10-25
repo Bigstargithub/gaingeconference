@@ -38,5 +38,14 @@ playlists.forEach(playlist => {
             list.classList.remove('active');
         })
         playlist.classList.add('active')
+        let inputEls = document.querySelectorAll(".play_list.active input")
+
+        const lessonNumber = document.querySelector('.watch__title .lesson_number')
+        const lessonTitle = document.querySelector('.watch__title .lesson_title')
+
+        lessonNumber.textContent = `Lesson ${inputEls[0].value}`
+        lessonTitle.innerHTML = inputEls[1].value
+        
+        return;
     })
 })
