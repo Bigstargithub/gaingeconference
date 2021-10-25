@@ -71,6 +71,7 @@ header
   object-fit: fill;
   position:fixed;
   top:0;
+  display:none;
 }
 .login .inner{
   width:100%;
