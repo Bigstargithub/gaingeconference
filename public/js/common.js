@@ -3,10 +3,14 @@
 const tabs = document.querySelectorAll('.play_tabs .tab');
 const playlists = document.querySelectorAll('.play_lists .play_list');
 
+
 tabs.forEach(tab => {
     tab.addEventListener('click', function() {
         tab.classList.add('active');
-        if(tab.dataset.play === 'conf' && today < new Date('2021-12-03 13:00:00'))
+        const today = moment().format()
+        const date = moment("2021-12-07 19:00:00").format()
+        
+        if(tab.dataset.play === 'conf' && today < date)
         {
             tab.dataset.play = 'countdown'
         }

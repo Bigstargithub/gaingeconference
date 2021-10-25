@@ -950,6 +950,10 @@ header
     margin-bottom:4vw;
     /* min-width:200px; */
   }
+  .watch .watch__playlist .play_lists.conf .play_list .list_detail .lesson_title
+  {
+    font-size:3.5vw;
+  }
   .watch .watch__playlist .play_list .list_detail .lesson_teacher
   {
     font-size:2.8vw;
@@ -979,7 +983,14 @@ header
     background:url('img/download_file.svg') 93% center no-repeat;
     background-color:#efefef;
     background-size:33.55px;
+  
   }
+  .watch .watch__contents .contents_files a
+  {
+    width:100%;
+  }
+  
+  .watch .watch__contents .contents_files a .file,
   .watch .watch__contents .contents_files .file
   {
     width:100%;
