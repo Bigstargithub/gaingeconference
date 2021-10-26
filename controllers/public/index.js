@@ -7,7 +7,7 @@ router.get('/',ctrl.get_main)
 
 router.post('/enter', ctrl.post_enter)
 
-router.get('/watch', ctrl.get_watch)
+router.get('/watch', is_login,ctrl.get_watch)
 
 router.put('/watch',ctrl.update_session)
 
