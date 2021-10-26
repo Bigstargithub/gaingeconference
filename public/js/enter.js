@@ -1,6 +1,8 @@
 
 const enterBtn = document.querySelector('#enter_btn')
 const codeBox = document.querySelector('#enter_code')
+const Video = document.querySelector('video');
+setTimeout(() => {Video.style.display = 'block'},100);
 
 codeBox.addEventListener('focus',() => {
   codeBox.placeholder = ""
