@@ -22,11 +22,13 @@ router.post('/enter', ctrl.post_enter)
 
 router.get('/main', ctrl.get_main)
 
-router.get('/code/list', ctrl.get_codelist)
+router.put('/main', ctrl.put_main)
+
+// router.get('/code/list', ctrl.get_codelist)
 
 router.get('/code/reg',ctrl.get_regcode)
 
-router.post('/send/phone', ctrl.post_sendcode)
+router.post('/code/reg', ctrl.post_sendcode)
 
 router.post('/reg/excel', upload.single('excel_file'), ctrl.post_excelcode)
 

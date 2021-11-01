@@ -53,3 +53,8 @@ playlists.forEach(playlist => {
         return;
     })
 })
+
+
+const windowWidth = window.outerWidth
+const windowHeight = window.outerHeight
+console.log(windowWidth, windowHeight)

@@ -202,11 +202,18 @@ header .inner .header__menu .menus .menu .menu__contents > ul > a >li
 {
     font-size:20px;
 }
+.regcode .reg__contents .reg__phone .phone__title span
+{
+    width:200px;
+    display:inline-block;
+}
 .regcode .reg__contents .reg__phone .phone__textbox
 {
     margin-top:10px;
+    display:flex;
 }
-.regcode .reg__contents .reg__phone .phone__textbox .textbox
+.regcode .reg__contents .reg__phone .phone__textbox .textbox_name,
+.regcode .reg__contents .reg__phone .phone__textbox .textbox_phone
 {
     width:200px;
     border-radius:5px;
@@ -236,4 +243,107 @@ header .inner .header__menu .menus .menu .menu__contents > ul > a >li
 .regcode .reg__contents .reg__excel .excel__file
 {
     font-size:16px;
+}
+
+/* 코드 관리  */
+.code
+{
+    width:100%;
+    position:absolute;
+    top:100px;
+}
+.code .inner
+{
+    
+}
+.code .code__contents
+{
+    max-width:1100px;
+    position:absolute;
+    left:0;
+    right:0;
+    margin:auto;
+    font-size:20px;
+}
+.code .code__contents .code__title
+{
+    margin-bottom:20px;
+    display:flex;
+    align-items: center;
+}
+.code .code__contents .code__title h1
+{
+    margin-right:20px;
+}
+.code .code__contents .code__title .search
+{
+    font-size:15px;
+    display:flex;
+    align-items: center;
+}
+.code .code__contents .code__title .search h3,
+.code .code__contents .code__title .search input[type="text"]
+{
+    margin-right:10px;
+}
+.code .code__contents .code__title .search input[type="text"]
+{
+    padding:5px;
+}
+.code .code__contents .code__title .search input[type="button"]
+{
+    background-color:#fff;
+    color:#000f9f;
+    cursor: pointer;
+    border:1px solid #1f1f1f;
+    border-radius:5px;
+}
+.code .code__contents .code__title .search input[type="button"]:hover
+{
+    background-color: #000f9f;
+    color:#fff;
+    border:1px solid #000f9f;
+}
+
+.code .code__contents .code__table
+{
+
+}
+.code .code__contents .code__table tr td
+{
+    width:100px;
+    /* border:1px solid #1f1f1f; */
+    padding:10px;
+    height:40px;
+}
+.code .code__contents .code__table tr td.search
+{
+    width:100%;
+    display:flex;
+}
+.code .code__contents .code__table tr td.search input[type="text"]
+{
+    margin-right:10px;
+
+}
+.code__pages
+{
+    /* text-align:center; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.code__pages .page_number
+{
+    /* display:inline-block; */
+    width:30px;
+    text-align: center;
+    cursor: pointer;
+}
+.code__pages .page_number.active{
+    font-weight:700;
+}
+.code__pages .material-icons
+{
+    cursor: pointer;
 }

@@ -1,4 +1,54 @@
 {% extends 'admin/header.html' %}
 {% block content %}
-    
+<script defer src="/admin/code.js"></script>
+<section class="code">
+    <div class="inner">
+        <div class="code__contents">
+            <div class="code__title">
+                <h1>코드 관리</h1>
+            </div>
+            <div class="code__table">
+                <table>
+                    <tr>
+                        <td>이름</td>
+                        <td>코드</td>
+                        <td class="search">
+                            <input type="text" name="code_search" id="code_search" />
+                    <input type="button" value="검색" id="btn" class="search_btn"/>
+                        </td>
+                    </tr>
+                    {% for code in code_list %}
+                    <tr>
+                        <td>{{code.name}}</td>
+                        <td>{{code.code}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <div class="code__pages">
+                <input type="hidden" name="now-page" class="now-page" value="{{page}}"/>
+                <input type="hidden" name="last-page" class="last-page" value="{{code_count}}" />
+                <input type="hidden" name="count" class="count" value="{{last_page}}" />
+                <input type="hidden" name="code_search" class="code_search" value="{{code}}">
+                <span class="material-icons prev">
+                    chevron_left
+                </span>
+                {% for i in range(paging, code_count+1) %}
+                {% if i === page %}
+                <span class="page_number active" data-page="{{i}}">
+                    {{i}}
+                </span>
+                {% else %}
+                <span class="page_number" data-page="{{i}}">
+                    {{i}}
+                </span>
+                {% endif %}
+                {% endfor %}
+                <span class="material-icons next">
+                    chevron_right
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
